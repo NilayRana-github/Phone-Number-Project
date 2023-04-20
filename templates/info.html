@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Info Page Phone Number</title>
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ </head>
+
+ <body style="background-color:black;">
+  <div class="login-box" >
+  <div class="login-header">Phone Number Info Form</div>
+  <div class="login-body">
+
+      <label for="phone_number">Mobile Number: {{phone_number}}</label><br>
+
+      <label for="country_name">Country Name</label>
+      <input type="text" class="form-control" value="{{ location_info['country_name'] }}" id="country_name" name="country_name"
+               required readonly><br>
+
+      <label for="service_provider">Service Provider</label>
+      <input type="text" class="form-control" value="{{ location_info['service_provider'] }}" id="service_provider" name="service_provider"
+               required readonly><br>
+
+      <label for="Latitude">Latitude</label>
+      <input type="number" class="form-control" value="{{ location_info['latitude'] }}" id="latitude" name="latitude"
+               required readonly><br>
+
+      <label for="longitude">longitude</label>
+      <input type="number" class="form-control" value="{{ location_info['longitude'] }}" id="longitude" name="longitude"
+               required readonly><br>
+
+    <form class="form-group" action="{{ url_for('show_map') }}" method="get">
+        <input type="hidden" class="form-control" id="phone_number" name="phone_number"
+               placeholder="Phone Number" pattern="[7-9][0-9]{9}" value="{{ phone_number }}" required><br>
+        <input type="submit" value="View on map" class="form-control btn btn-success">
+    </form>
+
+
+  </div>
+ </div>
+ </body>
+</html>
+
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--  <head>-->
+<!--    <title>Mobile Number Tracker - {{ phone_number }}</title>-->
+<!--  </head>-->
+<!--  <body>-->
+<!--    <h1>Mobile Number Tracker - {{ phone_number }}</h1>-->
+<!--    <p>Service provider: {{ location_info["service_provider"] }}</p>-->
+<!--    <p>Latitude: {{ location_info["latitude"] }}</p>-->
+<!--    <p>Longitude: {{ location_info["longitude"] }}</p>-->
+<!--    <form action="{{ url_for('show_map') }}" method="get">-->
+<!--      <input type="hidden" name="phone_number" value="{{ phone_number }}">-->
+<!--      <input type="submit" value="View on map">-->
+<!--    </form>-->
+<!--  </body>-->
+<!--</html>-->

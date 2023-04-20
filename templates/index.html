@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Phone Number</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+ <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ </head>
+ <body style="background-color:black;">
+  <div class="login-box" >
+  <div class="login-header">Phone Number Form</div>
+  <div class="login-body">
+<!--    <p>Please enter your phone number</p>-->
+    <form class="form-group" action="{{ url_for('home') }}" method="post">
+
+        <label for="phone_number">Enter Phone Number</label>
+        <input type="tel" class="form-control" id="phone_number" name="phone_number"
+               placeholder="Phone Number" required><br>
+        <input type="submit" value="Submit" class="form-control btn btn-success">
+
+    </form>
+
+  </div>
+ </div>
+ </body>
+</html>
+
+<!--         <label for="country_code">Select Country Code</label>-->
+<!--    <select class="form-control" id="country_code" name="country_code" required>-->
+<!--        {% for country in countries %}-->
+<!--            <option value="{{ country.alpha_2 }}">{{ country.name }} (+{{ country.country_code }})</option>-->
+<!--        {% endfor %}-->
+<!--    </select><br>-->
+
+
+<!--      <form class="form-group" action="{{ url_for('home') }}" method="post">-->
+<!--    <label for="country_code">Select Country Code</label>-->
+<!--    <select class="form-control" id="country_code" name="country_code" required>-->
+<!--        {% for country in countries %}-->
+<!--            <option value="{{ country.alpha_2 }}">{{ country.name }} (+{{ country.country_code }})</option>-->
+<!--        {% endfor %}-->
+<!--    </select><br>-->
+<!--    <label for="phone_number">Enter Phone Number</label>-->
+<!--    <input type="tel" class="form-control" id="phone_number" name="phone_number" placeholder="Phone Number" required><br>-->
+<!--    <input type="submit" value="Submit" class="form-control btn btn-success">-->
+<!--</form>-->
+
+<!--      <form class="form-group" action="{{ url_for('home') }}" method="post">-->
+<!--    <label for="phone_number">Enter Phone Number</label>-->
+<!--    <select class="form-select" name="country_code" required>-->
+<!--        <option value="" disabled selected>Select a country</option>-->
+<!--        {% for country in countries %}-->
+<!--            <option value="{{ country.alpha_2 }}">{{ country.name }}</option>-->
+<!--        {% endfor %}-->
+<!--    </select>-->
+<!--    <input type="tel" class="form-control" id="phone_number" name="phone_number" placeholder="Phone Number" required><br>-->
+<!--    <input type="submit" value="Submit" class="form-control btn btn-success">-->
+<!--</form>-->
+
